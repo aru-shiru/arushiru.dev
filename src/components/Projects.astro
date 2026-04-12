@@ -1,0 +1,97 @@
+---
+const projects = [
+  {
+    name: "e-Partai",
+    description: "Political party management system serving 1.6M members with 50K+ Play Store installs.",
+    details: "Nx monorepo with 15 API modules, functional error handling, AI analytics chatbot, and Meilisearch integration.",
+    tags: ["Flutter", "NestJS", "Nx", "Meilisearch", "AI"],
+    metric: "1.6M members",
+  },
+  {
+    name: "Pantau Relawan",
+    description: "Electoral volunteer management platform coordinating 300K volunteers across 40 organizations.",
+    details: "Flutter mobile with Riverpod, offline-first SQLite sync, and multi-tenant Firebase architecture.",
+    tags: ["Flutter", "Riverpod", "Firebase", "SQLite"],
+    metric: "300K volunteers",
+  },
+  {
+    name: "e-Watch LSI",
+    description: "Political fieldwork monitoring platform processing 500K+ submissions with real-time dashboards.",
+    details: "Real-time Nuxt dashboard with automated report generation and offline-first mobile queue system.",
+    tags: ["Nuxt", "Vue", "Offline-first", "Real-time"],
+    metric: "500K submissions",
+  },
+  {
+    name: "Narrative Phone",
+    description: "iOS/Android healthcare video calling application built with Zoom Video SDK.",
+    details: "Led two native developers building the app with Swift and Kotlin for seamless healthcare communication.",
+    tags: ["Swift", "Kotlin", "Zoom SDK", "Healthcare"],
+    metric: "Healthcare",
+  },
+  {
+    name: "SDS",
+    description: "Building services management platform with 2K+ daily active users.",
+    details: "React Native/Expo mobile with Supabase backend and biometric scanner integration via iClock protocol.",
+    tags: ["React Native", "Expo", "Supabase", "Biometrics"],
+    metric: "2K+ daily users",
+  },
+  {
+    name: "SimplePol",
+    description: "Health check management system replacing a legacy app with 1.5M installs.",
+    details: "Passwordless authentication, AI-powered ID card OCR, and Laravel-based backend architecture.",
+    tags: ["Laravel", "AI/OCR", "Passwordless Auth"],
+    metric: "1.5M legacy users",
+  },
+  {
+    name: "e-Hibah Polri",
+    description: "Grant management system for the Indonesian National Police.",
+    details: "Multi-level approval workflows, TOTP-based 2FA, and full Livewire-based UI rewrite.",
+    tags: ["Laravel", "Livewire", "TOTP 2FA"],
+    metric: "Government",
+  },
+  {
+    name: "Advansia",
+    description: "Agricultural sales force automation handling 50K+ records with supply chain tracking.",
+    details: "Offline-first React Native mobile with 17 Firebase microservices for complete agricultural workflow.",
+    tags: ["React Native", "Firebase", "Offline-first"],
+    metric: "50K+ records",
+  },
+];
+---
+
+<section id="projects" class="px-6 py-24">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="mb-2 font-mono text-sm text-accent">Projects</h2>
+    <h3 class="mb-12 text-2xl font-bold text-white sm:text-3xl">Things I've built</h3>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        projects.map((project) => (
+          <div class="group rounded-xl border border-zinc-800 bg-zinc-900/30 p-6 transition hover:border-zinc-700 hover:bg-zinc-900/50">
+            <div class="mb-3 flex items-start justify-between gap-3">
+              <h4 class="text-lg font-semibold text-white">{project.name}</h4>
+              <span class="shrink-0 rounded-full border border-zinc-700 bg-zinc-800/50 px-2.5 py-0.5 text-[10px] font-medium text-zinc-400">
+                {project.metric}
+              </span>
+            </div>
+
+            <p class="mb-2 text-sm leading-relaxed text-zinc-300">
+              {project.description}
+            </p>
+            <p class="mb-4 text-xs leading-relaxed text-zinc-500">
+              {project.details}
+            </p>
+
+            <div class="flex flex-wrap gap-1.5">
+              {project.tags.map((tag) => (
+                <span class="rounded border border-zinc-800 bg-zinc-950/50 px-2 py-0.5 text-[10px] text-zinc-500">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

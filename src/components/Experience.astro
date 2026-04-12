@@ -1,0 +1,60 @@
+---
+const jobs = [
+  {
+    role: "Technical Lead & Senior Full-Stack Engineer",
+    company: "PT Lamacca Kreatif Solusi",
+    period: "2018 — Present",
+    description:
+      "Leading engineering across 30+ projects for Indonesian enterprises and government clients. Architecting full-stack systems spanning mobile, web, and backend serving millions of users.",
+    highlights: [
+      "Led development of systems serving 1.6M+ users",
+      "Managed and mentored development teams",
+      "Delivered solutions for enterprise and government sectors",
+    ],
+  },
+  {
+    role: "Co-Founder & Full-Stack Engineer",
+    company: "Belliki",
+    period: "2016 — 2018",
+    description:
+      "Co-founded and built an online marketplace for custom apparel with an interactive design canvas, handling the full product lifecycle from concept to launch.",
+    highlights: [
+      "Built interactive product design canvas",
+      "Architected marketplace platform end-to-end",
+      "Managed product strategy and engineering",
+    ],
+  },
+];
+---
+
+<section id="experience" class="px-6 py-24">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="mb-2 font-mono text-sm text-accent">Experience</h2>
+    <h3 class="mb-12 text-2xl font-bold text-white sm:text-3xl">Where I've worked</h3>
+
+    <div class="relative space-y-12 pl-8 before:absolute before:left-0 before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-zinc-800">
+      {
+        jobs.map((job) => (
+          <div class="relative">
+            <div class="absolute -left-8 top-2 h-2 w-2 rounded-full border-2 border-accent bg-zinc-950" />
+
+            <div class="mb-1 font-mono text-xs text-zinc-500">{job.period}</div>
+            <h4 class="mb-1 text-lg font-semibold text-white">{job.role}</h4>
+            <div class="mb-3 text-sm text-accent/80">{job.company}</div>
+            <p class="mb-4 text-sm leading-relaxed text-zinc-400">
+              {job.description}
+            </p>
+            <ul class="space-y-1">
+              {job.highlights.map((h) => (
+                <li class="flex items-start gap-2 text-sm text-zinc-400">
+                  <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-zinc-600" />
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
